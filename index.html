@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 6px;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<form action="mailto:" method="POST" enctype="text/plain">
+    <label>To:</label>
+    <input type="email" name="to" required>
+
+    <label>Subject:</label>
+    <input type="text" name="subject" required>
+
+    <label>Message:</label>
+    <textarea name="body" rows="5" required></textarea>
+
+    <button type="submit">Send Email</button>
+</form>
+
+</body>
+</html>
