@@ -35,16 +35,10 @@
 </head>
 <body>
 
-<form action="mailto:" method="POST" enctype="text/plain">
-    <label>To:</label>
-    <input type="email" name="to" required>
-
-    <label>Subject:</label>
-    <input type="text" name="subject" required>
-
-    <label>Message:</label>
-    <textarea name="body" rows="5" required></textarea>
-
+<form action="https://your-n8n-domain/webhook/send-email" method="POST">
+    <input type="email" name="to" placeholder="To" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <textarea name="message" placeholder="Message" rows="5" required></textarea>
     <button type="submit">Send Email</button>
 </form>
 
